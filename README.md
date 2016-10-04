@@ -1,6 +1,8 @@
 # Serverless Babel Webpack Starter Kit
 Babel(ES7) + Webpack + Serverless Framework
 
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
 ### Description
 write AWS Lambda Functions with ES7(async/await is available)
 
