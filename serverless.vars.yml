@@ -24,3 +24,4 @@ currentVars:
   cors:
     origins: ${self:custom.currentVars.CorsOrigins}
 webpack: ${self:custom.currentVars.webpackConfigFile}
+webpackIncludeModules: true
