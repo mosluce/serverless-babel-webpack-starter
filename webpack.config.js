@@ -3,6 +3,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const helpers = require('./config/helpers');
+const externels = require('webpack-node-externals');
 
 module.exports = (settings) => ({
     entry: {
@@ -14,15 +15,10 @@ module.exports = (settings) => ({
         filename: '[name].js'
     },
     externals: [
-        'aws-sdk', // aws-sdk included in Lambda
+        externels()
     ],
     resolve: {
-        // set root resolver to app directory.
-        // this allows using absolute paths for imports starting from
-        // the app folder instead of relative paths
-        // ie import { } from dir/dir/dir vs
-        // ie import { } from ../../../
-        root: __dirname,
+        extensions: ['', '.js']
     },
     module: {
         loaders: [
@@ -39,8 +35,7 @@ module.exports = (settings) => ({
     },
     plugins: [
         new webpack.DefinePlugin(settings),
-        new webpack.IgnorePlugin(/\.(css|less)$/),
-        new webpack.optimize.UglifyJsPlugin()
+        new webpack.IgnorePlugin(/\.(css|less)$/)
     ],
     target: 'node',
     devtool: 'source-map'
