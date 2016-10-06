@@ -25,4 +25,3 @@ npm install
 
 ### 待解決問題
 - serverless 目前版本無法設定 request/response model
-- serverless webpack local 端測試會發生錯誤: Cannot read property 'call' of undefined
