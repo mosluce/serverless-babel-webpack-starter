@@ -37,6 +37,9 @@ module.exports = (settings) => ({
         new webpack.DefinePlugin(settings),
         new webpack.IgnorePlugin(/\.(css|less)$/)
     ],
+    node: {
+        __dirname: true
+    },
     target: 'node',
     devtool: 'source-map'
 });
