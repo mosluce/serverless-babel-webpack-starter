@@ -4,8 +4,8 @@
  * @param context
  * @param context.done
  */
-export const handler = async (event, context) => {
-    context.done(null, await wait());
+export const handler = async (event, context, cb) => {
+    cb(null, await wait());
 };
 
 function wait() {
