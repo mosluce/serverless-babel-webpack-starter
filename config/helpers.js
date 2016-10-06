@@ -1,12 +1,12 @@
-module.exports.polyfill = function (path) {
-    if (typeof path === 'string') {
-        return ['babel-polyfill', path];
+module.exports.polyfill = function (file) {
+    if (typeof file === 'string') {
+        return ['babel-polyfill', file];
     }
 
-    if (path instanceof Array) {
-        path.unshift('babel-polyfill');
-        return path;
+    if (file instanceof Array) {
+        file.unshift('babel-polyfill');
+        return file;
     }
 
-    return path;
+    return file;
 };

@@ -1,6 +1,6 @@
 {
   "name": "serverless-babel-webpack-starter",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "ES7 + Babel + Webpack + Serverless Framework",
   "dependencies": {
     "babel-polyfill": "^6.16.0"
